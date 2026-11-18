@@ -38,7 +38,7 @@
     "id": 6,
     "paper_id": "2209.02746v1",
     "chunk_id": "2209.02746v1_3",
-    "question": "How does the simplest filter technique decide which features to keep?",
+    "question": "In the handcrafted feature selection survey for pattern recognition, how does the simplest filter technique decide which features to keep?",
     "keyphrase": "calculating the variance of each feature"
   },
   {
@@ -52,29 +52,29 @@
     "id": 8,
     "paper_id": "1704.02665v3",
     "chunk_id": "1704.02665v3_14",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the supervised infinite feature selection paper, why does the RDN redundancy measure beat SPR at capturing relations between features?",
+    "keyphrase": "able to individuate any kind of dependency"
   },
   {
     "id": 9,
     "paper_id": "1506.05173v2",
     "chunk_id": "1506.05173v2_39",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the ridge regression feature selection paper with provable guarantees, roughly how long does BSS take to select features?",
+    "keyphrase": "takes approximately a minute to select features"
   },
   {
     "id": 10,
     "paper_id": "2406.14401v1",
     "chunk_id": "2406.14401v1_5",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the fair streaming feature selection paper, what is the main limitation of the Alpha-investing approach?",
+    "keyphrase": "its sole focus on feature addition"
   },
   {
     "id": 11,
     "paper_id": "2106.06437v1",
     "chunk_id": "2106.06437v1_14",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the feature selection tutorial with Python examples, what makes a feature subset good according to the CFS filter strategy?",
+    "keyphrase": "contains features highly correlated with"
   },
   {
     "id": 12,
@@ -87,57 +87,57 @@
     "id": 13,
     "paper_id": "2110.10713v1",
     "chunk_id": "2110.10713v1_21",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the predictive permutation feature selection paper, how does the PIFS baseline estimate how important each feature is?",
+    "keyphrase": "uses multiple shuffled versions of each feature"
   },
   {
     "id": 14,
     "paper_id": "2001.08371v1",
     "chunk_id": "2001.08371v1_8",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the wrapper feature selection paper for patent value assessment, which dataset and classifier does the worked example use?",
+    "keyphrase": "segmentation dataset with the k-NN clustering algorithm"
   },
   {
     "id": 15,
     "paper_id": "1708.08750v1",
     "chunk_id": "1708.08750v1_23",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the incipient-stage building fire classification paper, which classifier outperformed the other common ones?",
+    "keyphrase": "surpasses the performance of other common classifiers"
   },
   {
     "id": 16,
     "paper_id": "2412.10128v3",
     "chunk_id": "2412.10128v3_48",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the latent factor models feature selection paper, how large is the feature subset used to reach the best CIFAR-100 result?",
+    "keyphrase": "reduced subset of 800 out of 1024 features"
   },
   {
     "id": 17,
     "paper_id": "2510.05535v3",
     "chunk_id": "2510.05535v3_27",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the privacy-preserving permutation-invariant feature selection paper, how does the FedProx baseline modify FedAvg's local training?",
+    "keyphrase": "introducing a proximal term into the local objective"
   },
   {
     "id": 18,
     "paper_id": "2302.13221v4",
     "chunk_id": "2302.13221v4_15",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the generative feature selection paper that searches a continuous embedding space, what training objectives does the model combine?",
+    "keyphrase": "reconstructing the feature ID tokens"
   },
   {
     "id": 19,
     "paper_id": "1712.03223v1",
     "chunk_id": "1712.03223v1_12",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the antlion optimization paper comparing S-shaped and V-shaped transfer functions, which variant selected the fewest features on most datasets?",
+    "keyphrase": "ALO-V3 shows better performance than other approaches"
   },
   {
     "id": 20,
     "paper_id": "2107.00219v1",
     "chunk_id": "2107.00219v1_8",
-    "question": "",
-    "keyphrase": ""
+    "question": "In the ControlBurn paper, why does the objective prefer ensembles that rely on few features?",
+    "keyphrase": "penalty increases as more features are used"
   },
   {
     "id": 21,

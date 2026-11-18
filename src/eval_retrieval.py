@@ -47,8 +47,10 @@ def evaluate(search_fn, name="dense", k=K):
     if len(items) < MIN_ITEMS:
         raise SystemExit(f"Only {len(items)} questions are filled in. Write at least {MIN_ITEMS}.")
     ranks, misses = [], []
+    paper_hits = []
     for item in items:
         results = search_fn(item["question"], k=k)
+        paper_hits.append(any(res["paper_id"] == item["paper_id"] for res in results[:5]))
         rank = next(
             (r for r, res in enumerate(results, start=1) if is_relevant(res, item)), None
         )
@@ -70,6 +72,7 @@ def evaluate(search_fn, name="dense", k=K):
     print(f"hit@5  {hit(5):.0%}")
     print(f"hit@10 {hit(10):.0%}")
     print(f"MRR    {mrr:.3f}")
+    print(f"right paper in top 5: {sum(paper_hits) / n:.0%}")
 
     print("\nQuestions where the right chunk is not in the top 3:")
     for item, rank, top in misses:
