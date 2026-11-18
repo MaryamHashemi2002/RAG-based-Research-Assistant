@@ -1,4 +1,4 @@
-from src.clean_text import cut_references, fix_text, remove_repeated_lines, split_pages
+from src.ingest.clean_text import cut_references, fix_text, remove_repeated_lines, split_pages
 
 
 def test_fix_text_joins_hyphenated_line_breaks():

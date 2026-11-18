@@ -1,4 +1,4 @@
-from src.make_chunks import (
+from src.ingest.make_chunks import (
     ENC,
     OVERLAP,
     SIZE,
