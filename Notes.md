@@ -1,3 +1,7 @@
+| method | hit@1 | hit@3 | hit@5 | hit@10 | MRR | right paper in top 5 |
+| dense  | 25%   | 38%   | 44%   | 56%    | 0.332 | 100% |
+| bm25   | 12%   | 38%   | 44%   | 75%    | 0.288   | ... |
+
 - Sentence-aware chunking chosen over fixed (fewer mid-sentence cuts).
 - Known noise: author headers, footnotes, a few broken hyphens.
 - 25 of 1090 chunks (2.3%) are result tables; the model truncates them at 512 tokens. Acceptable for now; revisit if evaluation (Day 32) shows table questions failing.

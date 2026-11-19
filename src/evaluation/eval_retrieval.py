@@ -93,5 +93,13 @@ def evaluate(search_fn, name="dense", k=K):
 
 
 if __name__ == "__main__":
-    evaluate(search, name="dense")
-    close()
+    import sys
+
+    mode = sys.argv[1] if len(sys.argv) > 1 else "dense"
+    if mode == "bm25":
+        from src.retrieval.bm25 import search_bm25
+
+        evaluate(search_bm25, name="bm25")
+    else:
+        evaluate(search, name="dense")
+        close()
