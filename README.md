@@ -13,6 +13,7 @@ Ask questions over a collection of research papers and get answers grounded in t
 - Searches with dense retrieval, BM25, or a hybrid of both (Reciprocal Rank Fusion)
 - Filters results by year or by paper
 - Measures retrieval quality with a labeled question set
+- The cross-encoder reranker changes top-3 and top-5 results by about 2 questions, which is within noise on 16 questions. Some misses remain where a page-1 abstract chunk outranks the answer passage.
 
 ## Results
 
@@ -23,6 +24,7 @@ Evaluation set: 16 hand-written questions, each with one correct passage. Questi
 | Dense (bge-small) | 25% | 38% | 44% | 56% | 0.332 |
 | BM25 | 12% | 38% | 44% | 75% | 0.288 |
 | Hybrid (RRF) | 25% | 31% | 38% | 69% | 0.341 |
+| Hybrid + rerank (MiniLM cross-encoder, top 30) | 19% | 44% | 50% | 69% | 0.336 |
 
 Is the correct passage somewhere in the top N candidates?
 
@@ -78,6 +80,7 @@ python -m src.retrieval.build_index     # build the Qdrant index
 python -m src.retrieval.search "How does L1 regularization select features?"
 python -m src.retrieval.bm25 "How does L1 regularization select features?"
 python -m src.retrieval.hybrid "How does L1 regularization select features?"
+python -m src.retrieval.rerank "How does L1 regularization select features?"
 ```
 
 Qdrant runs in local mode (one process at a time). Close other Python shells and debuggers before searching.
@@ -96,7 +99,7 @@ python -m pytest
 - [x] Sentence-aware chunking
 - [x] Dense, BM25 and hybrid retrieval with metadata filters
 - [x] Retrieval evaluation (hit@k, MRR, candidate recall) and unit tests
-- [ ] Cross-encoder reranker
+- [x] Cross-encoder reranker
 - [ ] LLM answers with source citations
 - [ ] FastAPI backend and Streamlit UI
 - [ ] Docker and GitHub Actions CI

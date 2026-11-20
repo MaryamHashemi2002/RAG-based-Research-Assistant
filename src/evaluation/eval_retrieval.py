@@ -110,6 +110,11 @@ if __name__ == "__main__":
 
         evaluate(search_hybrid, name="hybrid")
         close()
+    elif mode == "rerank":
+        from src.retrieval.rerank import search_rerank
+
+        evaluate(search_rerank, name="rerank")
+        close()        
     else:
         evaluate(search, name="dense")
         close()
