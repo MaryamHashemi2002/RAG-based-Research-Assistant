@@ -1,6 +1,8 @@
-| method | hit@1 | hit@3 | hit@5 | hit@10 | MRR | right paper in top 5 |
-| dense  | 25%   | 38%   | 44%   | 56%    | 0.332 | 100% |
-| bm25   | 12%   | 38%   | 44%   | 75%    | 0.288   | ... |
+name,n,hit@1,hit@3,hit@5,hit@10,mrr
+dense,16,0.250,0.375,0.438,0.562,0.332
+bm25,16,0.125,0.375,0.438,0.750,0.288
+hybrid,16,0.250,0.312,0.375,0.688,0.341
+
 
 - Sentence-aware chunking chosen over fixed (fewer mid-sentence cuts).
 - Known noise: author headers, footnotes, a few broken hyphens.

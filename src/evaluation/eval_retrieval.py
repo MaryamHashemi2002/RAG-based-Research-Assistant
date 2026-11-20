@@ -82,14 +82,19 @@ def evaluate(search_fn, name="dense", k=K):
             print(f"      top result: {top['title']} (p.{top['page']})")
 
     RESULTS_CSV.parent.mkdir(exist_ok=True)
-    new_file = not RESULTS_CSV.exists()
-    with RESULTS_CSV.open("a", newline="", encoding="utf-8") as f:
+    header = ["name", "n", "hit@1", "hit@3", "hit@5", "hit@10", "mrr"]
+    row = [name, n, f"{hit(1):.3f}", f"{hit(3):.3f}", f"{hit(5):.3f}", f"{hit(10):.3f}", f"{mrr:.3f}"]
+
+    kept = []
+    if RESULTS_CSV.exists():
+        with RESULTS_CSV.open(newline="", encoding="utf-8") as f:
+            kept = [r for r in list(csv.reader(f))[1:] if r and r[0] != name]
+    kept.append(row)
+
+    with RESULTS_CSV.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        if new_file:
-            writer.writerow(["name", "n", "hit@1", "hit@3", "hit@5", "hit@10", "mrr"])
-        writer.writerow(
-            [name, n, f"{hit(1):.3f}", f"{hit(3):.3f}", f"{hit(5):.3f}", f"{hit(10):.3f}", f"{mrr:.3f}"]
-        )
+        writer.writerow(header)
+        writer.writerows(kept)
 
 
 if __name__ == "__main__":
