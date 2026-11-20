@@ -16,3 +16,8 @@ hybrid,16,0.250,0.312,0.375,0.688,0.341
 - Baseline (dense, 16 questions): hit@1 25%, hit@3 38%, hit@5 44%, hit@10 56%, MRR 0.332.
 - In all 10 misses the top result was from the correct paper but a different chunk (mostly p.1 title/abstract). Question wording that names the paper pulls first-page chunks.
 - Expectation: reranker (Day 13) helps most.
+- split oversized sentences (the 1,404-token chunk bug)
+- test 150/250-token chunks
+- pass the neighbouring chunks to the LLM (question 16 would have worked)
+- try a different reranker
+- add a second question set that doesn’t name the paper
