@@ -100,6 +100,11 @@ if __name__ == "__main__":
         from src.retrieval.bm25 import search_bm25
 
         evaluate(search_bm25, name="bm25")
+    elif mode == "hybrid":
+        from src.retrieval.hybrid import search_hybrid
+
+        evaluate(search_hybrid, name="hybrid")
+        close()
     else:
         evaluate(search, name="dense")
         close()
