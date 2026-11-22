@@ -1,3 +1,7 @@
+python -m src.generation.try_prompt "How does L1 regularization select features?"
+python -m src.generation.try_prompt "Why is unsupervised feature selection harder than supervised?"
+python -m src.generation.try_prompt "What is the capital of France?"
+python -m src.generation.try_prompt "How does AlphaFold predict protein structures?"
 name,n,hit@1,hit@3,hit@5,hit@10,mrr
 dense,16,0.250,0.375,0.438,0.562,0.332
 bm25,16,0.125,0.375,0.438,0.750,0.288
