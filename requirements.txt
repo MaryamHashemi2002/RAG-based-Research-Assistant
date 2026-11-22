@@ -6,3 +6,5 @@ sentence-transformers
 numpy
 qdrant-client
 rank-bm25
+openai
+python-dotenv
