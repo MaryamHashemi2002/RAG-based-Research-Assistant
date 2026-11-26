@@ -7,10 +7,10 @@ Rules:
 - Cite the sources you used by number in square brackets, like [1] or [2][3].
 - Write one short paragraph of 2 to 4 sentences. Do not list the sources and do not copy them word for word."""
 
-MAX_CHARS = 2000  # per source, keeps the whole prompt inside the model's context window
+MAX_CHARS = 1000  # per source, keeps the whole prompt inside the model's context window
 
 
-def format_sources(chunks, max_chars= 1000):
+def format_sources(chunks, max_chars=MAX_CHARS):
     blocks = []
     for number, chunk in enumerate(chunks, start=1):
         text = chunk["text"][:max_chars]
@@ -18,7 +18,7 @@ def format_sources(chunks, max_chars= 1000):
     return "\n\n".join(blocks)
 
 
-def build_messages(question, chunks, max_chars= 1000):
+def build_messages(question, chunks, max_chars=MAX_CHARS):
     user = (
         f"Sources:\n\n{format_sources(chunks, max_chars)}\n\n"
         f"Question: {question}\n\n"
